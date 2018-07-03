@@ -1,10 +1,14 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
-import HomeContainer from '../containers/HomeContainer';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import Home from '../containers/HomeContainer';
+import NotFound from '../screens/NotFound';
 
 const RouterApp = () => (
   <BrowserRouter>
-    <Route path="/teste" component={HomeContainer} />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="*" component={NotFound} />
+    </Switch>
   </BrowserRouter>
 );
 

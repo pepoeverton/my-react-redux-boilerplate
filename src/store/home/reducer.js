@@ -1,5 +1,5 @@
 export default function home(state = {
-  message: 'Vamos lá...',
+  message: "Let's go...",
 }, action) {
   switch (action.type) {
     default:
